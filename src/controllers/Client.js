@@ -66,7 +66,7 @@ export const addStar = async(req, res) => {
 
             const updateClientSeven = await Client.findByIdAndUpdate(id, { stars: 0 }, { new: true });
 
-            return res.status(200).json({ body: updateClientSeven, message: "Ha ganado un llenado un garrafón gratis!" });
+            return res.status(200).json({ body: updateClientSeven, message: "Ha ganado un llenado de garrafón gratis!" });
 
         }
 
