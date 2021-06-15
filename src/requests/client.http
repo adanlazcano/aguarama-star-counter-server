@@ -1,0 +1,42 @@
+@api = http://localhost:8800/api/client
+
+### GET CLIENTS
+GET {{api}}
+
+### GET CLIENT
+GET {{api}}/6181191972
+
+### SAVE CLIENT
+POST {{api}}
+Content-Type: application/json
+
+{
+    "nombre":"adan",
+    "cel":"6181191972"
+}
+
+### ADD STAR
+PUT {{api}}/star/add
+Content-Type: application/json
+
+{
+    "id":"60c429103699721580262980"
+   
+}
+
+### REMOVE STAR
+PUT {{api}}/star/remove
+Content-Type: application/json
+
+{
+    "id":"60c429103699721580262980",
+    "star":1
+}
+### RESET STAR
+PUT {{api}}/star/reset
+Content-Type: application/json
+
+{
+    "id":"60c429103699721580262980"
+    
+}
