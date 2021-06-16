@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import { enviroment } from './config.js';
 
+// Database connection
 try {
 
     const { url_database } = enviroment;

@@ -29,6 +29,7 @@ app.use((_, res) => {
     res.status(404).json({ message: "Page not found" })
 });
 
+//Listen port
 app.listen(app.get('port'), _ => {
     try {
         console.log(`Server running on Port ${app.get('port')}`);

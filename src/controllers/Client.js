@@ -1,5 +1,6 @@
 import Client from "../models/Client.js";
-// import { conectApi, sendMessage } from "../whatsApp/WhatsApp.js";
+
+// Get Participants (Clients)
 
 export const getClients = async(req, res) => {
     try {
@@ -12,9 +13,10 @@ export const getClients = async(req, res) => {
     }
 }
 
+// Participants register
+
 export const saveClient = async(req, res) => {
     try {
-        // const clientCompare = await Client.find({})
         const { nombre, cel } = req.body;
         const newClient = {
             nombre,
@@ -30,6 +32,8 @@ export const saveClient = async(req, res) => {
     }
 }
 
+// Get participant per ID
+
 export const getClient = async(req, res) => {
     try {
         const client = await Client.findOne({ cel: req.params.cel });
@@ -41,52 +45,41 @@ export const getClient = async(req, res) => {
     }
 }
 
+// Add Star to participant
+
 export const addStar = async(req, res) => {
     try {
 
-
         let message = "";
         const id = req.body.id;
-
         const client = await Client.findById(id);
-
 
         if (client.stars === 4) {
 
             const random = Math.floor(100000 + Math.random() * 90000);
 
             message = `Folio para rifa de TV Samsung 43'' ${random}`;
-
-            // conectApi();
-            // sendMessage("526181191972", message)
-
         }
 
         if (client.stars === 6) {
 
             const updateClientSeven = await Client.findByIdAndUpdate(id, { stars: 0 }, { new: true });
-
             return res.status(200).json({ body: updateClientSeven, message: "Ha ganado un llenado de garrafón gratis!" });
 
         }
-
-
         const updateClient = await Client.findByIdAndUpdate(id, { stars: client.stars + 1 }, { new: true });
 
-
-
         return res.status(200).json({ body: updateClient, message: message });
-
-
 
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 }
+
+//Remove Star to participant
+
 export const removeStar = async(req, res) => {
     try {
-        // const client = await Client.findOneAndUpdate({ cel: req.body.cel }, { $pull: { stars: req.body.star } }, { new: true });
-        // const client = await Client.findOneAndUpdate({ cel: req.body.cel }, { stars: [] }, { new: true });
         const id = req.body.id;
         const client = await Client.findById(id);
         const updateClient = await Client.findByIdAndUpdate(id, { stars: client.stars - 1 }, { new: true });
@@ -97,6 +90,8 @@ export const removeStar = async(req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
+
+// Reset Starts to participants
 export const resetStars = async(req, res) => {
     try {
         const id = req.body.id;
