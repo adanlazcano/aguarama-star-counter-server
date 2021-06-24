@@ -4,6 +4,9 @@ Registro de participantes que acuden a llenar su garrafón de agua.
 
 Al llenado de un garrafón, al cliente se le asigna una estrella, cuando acumula 5 llenados es merecedor de un boleto con folio generado por el sistema, para la rifa de una TV de 43'', si el cliente sigue acumulando hasta llegar a 7 estrellas se le regalara un llenado de garrafón.
 
+[Visita el repositorio del lado del cliente](https://github.com/adanlazcano/aguarama-star-counter)
+
+
 # Application created to AGUARAMA s.a de c.v.
 
 Registration of participants who come to fill their jug ​​of water.
