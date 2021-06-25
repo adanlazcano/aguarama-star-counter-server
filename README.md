@@ -1,4 +1,4 @@
-# Aplicación creada para AGUARAMA s.a de c.v.
+## Aplicación creada para AGUARAMA s.a de c.v.
 
 Registro de participantes que acuden a llenar su garrafón de agua.
 
@@ -9,7 +9,7 @@ Al llenado de un garrafón, al cliente se le asigna una estrella, cuando acumula
 [Visita el repositorio del lado del cliente](https://github.com/adanlazcano/aguarama-star-counter)
 
 
-# Application created to AGUARAMA s.a de c.v.
+## Application created to AGUARAMA s.a de c.v.
 
 Registration of participants who come to fill their jug ​​of water.
 
