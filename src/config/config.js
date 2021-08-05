@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-// Enviroment Variables Config
+// Environment Variables Config
 
 export const environment = {
 
