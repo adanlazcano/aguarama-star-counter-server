@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
-import { enviroment } from './config.js';
+import { environment } from './config.js';
 
 // Database connection
 try {
 
-    const { url_database } = enviroment;
+    const { url_database } = environment;
 
     const dbOptions = {
 
