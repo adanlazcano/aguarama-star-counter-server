@@ -3,7 +3,7 @@ dotenv.config();
 
 // Enviroment Variables Config
 
-export const enviroment = {
+export const environment = {
 
     port: process.env.PORT,
     url_database: process.env.MONGODB_ATLAS_URL
